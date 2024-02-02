@@ -1,0 +1,194 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  background: rgba(8,8,8,.75);
+}
+.navbar a {
+  color: #fff;
+}
+.navbar li[data-active="false"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.navbar li[data-active="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body {
+  position: relative;
+  color: #f3f5f7;
+  background: #0e8b44 url('https://bfa.github.io/solitaire-js/img/green_felt.jpg');
+  background-size: cover;
+  background-position: center;
+} 
+
+#game-title {
+  font-family: Merienda;
+  position: fixed;
+  display: inline-flex;
+  left: 49%;
+}
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#game-container {
+  display: block;
+  height: 100vh; 
+}
+
+
+/* Style player information */
+.playersInfo {
+  color: white;
+  font-family: Merienda;
+  width: 10%;
+  margin-bottom: 0px;
+}
+.player-container {
+  width: 20%;
+  height: 30px;
+  display: inline;
+  margin-bottom: 0px;
+  background-color: red;
+}
+
+/* #player1-container {
+  
+}
+
+#player1-hand-cards {
+  
+}
+
+#player1-phase-cards {
+  
+}
+
+#player2-container {
+ 
+}
+
+#player2-hand-cards {
+  
+}
+
+#player2-phase-cards {
+  
+}
+
+#player3-container {
+  
+}
+
+#player3-hand-cards {
+  
+}
+
+#player3-phase-cards {
+  
+}
+
+#player4-container {
+ 
+}
+
+#player4-hand-cards {
+  
+}
+
+#player4-phase-cards {
+  
+}
+
+#player5-container {
+  rotate: 0deg;
+}
+
+#player5-hand-cards {
+  
+}
+
+#player5-phase-cards {
+  
+}
+
+#player6-container {
+  rotate: 0deg;
+  margin-top:5%;
+}
+
+#player6-hand-cards {
+  rotate: 0deg;
+}
+
+#player6-phase-cards {
+  
+} */
+
+.hand-card-container {
+  display: flex;
+  justify-content: left;
+  width: 20%;
+}
+
+.hand-card-container div {
+  margin-right: -130px;
+}
+
+.phase-card-container {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+
+.phase-card-container div {
+  margin-right: -115px;
+}
+
+.card:hover {
+  border: 2px;
+}
+
+.card.selected {
+  transform: scale(1);
+  border: 2px solid green;
+}
+
+#discard-pile-container {
+  position: fixed;
+  top: 39%;
+  left: 47%;
+}
+
+#discard-pile div {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  margin-bottom: -50px;
+}
+
+#card-deck-container {
+  position: fixed;
+  top: 24%;
+  left: 47%;
+  background-color: red;
+}
+
+#card-deck div {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  margin-bottom: -50px;
+}
+
+
+
+/* Add more styles as needed */

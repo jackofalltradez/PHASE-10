@@ -1,0 +1,154 @@
+/* 
+$red: #AF0505;
+$yellow: #F8A71A;
+$green: #177804;
+$blue: #0A2682;
+$black: black; 
+*/
+
+
+.card {
+  transform: scale(0.4);
+  font-family: Merienda;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 240px;  
+  background: white;
+  border-radius: 11px;
+  background-image: './images/phase10 logo.png';
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border: 5px solid white;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+  perspective: 1000px;
+
+  &.red {
+    color: #AF0505;
+    
+    .corner {
+      background: #AF0505;
+    }
+  }
+  
+  &.green {
+    color: #177804;
+    
+    .corner {
+      background: #177804;
+    }
+  }
+  
+  &.yellow {
+    color: #F8A71A;
+    
+    .corner {
+      background: #F8A71A;
+    }
+  }
+  
+  &.blue {
+    color: #0A2682;
+    
+    .corner {
+      background: #0A2682;
+    }
+  }
+
+  .num {
+    font-size: 110px;
+    position: absolute;
+    letter-spacing: -1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.33);
+  }
+
+  .corner {
+    width: 65px;
+    height: 85px;
+    position: absolute;
+    border-radius: 0px 0px 90px 0px;
+    color: white;
+    text-shadow: 1px -1px 0px #000, -1px -1px 0px #000, -1px 1px 0px #000,
+      1px 1px 0px #000;
+
+    span {
+      position: absolute;
+      top: 32px;
+      left: 11px;
+      font-size: 30px;
+    }
+
+    &.top {
+      top: -30px;
+      left: -5px;
+    }
+
+    &.bottom {
+      bottom: -30px;
+      right: -5px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &.underline {
+    .num {
+      text-decoration: underline;
+    }
+    
+    .corner span {
+      text-decoration: underline;
+    }
+  }
+
+  &.black {
+    font-family: Arial !important;
+    color: red;
+    background: black;
+
+    .num {
+      font-size: 55px;
+      text-shadow: 1px -1px 0px #ffffff, -1px -1px 0px #ffffff,
+        -1px 1px 0px #ffffff, 1px 1px 0px #ffffff;
+    }
+
+    .corner {
+      background: white;
+      color: red;
+    }
+  }
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s; /* Transition for the flip effect */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Rotate 180 degrees on hover */
+  transform: scale(1.1);
+  border: 52px solid red;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Initially hidden behind the front side */
+}
+
+img {
+  object-fit: cover;
+}
